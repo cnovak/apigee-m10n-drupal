@@ -119,10 +119,12 @@ an actual Apigee organization credentials to contribute to this module. There ar
 examples in the test suite on how to write tests and queue mock responses. Responses are
 returned in the chronological order they are queued.
 
-In order to run tests against an actual Apigee organization, you must first set up
-credentials according to the instructions in the instructions in the [Apigee Edge Drupal module](https://github.com/apigee/apigee-edge-drupal/blob/8.x-1.x/CONTRIBUTING.md#running-tests).
-Then integration can be enabled by setting `APIGEE_INTEGRATION_ENABLE` environment variable
-to "1" i.e. by setting `<env name="APIGEE_INTEGRATION_ENABLE" value='1' />` in phpunit.xml.
+Even if you are using mock tests, you will still need to set up credentials according to the instructions in the
+instructions in the
+[Apigee Edge Drupal module](https://github.com/apigee/apigee-edge-drupal/blob/8.x-1.x/CONTRIBUTING.md#running-tests).
+
+In order to run tests against an actual Apigee organization, you need to set the environment variable
+ `APIGEE_INTEGRATION_ENABLE` to "1" i.e. by setting `<env name="APIGEE_INTEGRATION_ENABLE" value='1' />` in phpunit.xml.
 
 If needed, you can set environment variables multiple ways, either by defining them with
 `export` or `set` in the terminal or creating a copy of the `core/phpunit.xml.dist`
